@@ -13,6 +13,7 @@
 		B5CD03E91B34CEF900106BD5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CD03E81B34CEF900106BD5 /* Images.xcassets */; };
 		B5CD03EC1B34CEF900106BD5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5CD03EA1B34CEF900106BD5 /* LaunchScreen.xib */; };
 		B5CD03F81B34CEF900106BD5 /* RotatingDialsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD03F71B34CEF900106BD5 /* RotatingDialsTests.swift */; };
+		B5CD04021B34CFB700106BD5 /* CircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CD04011B34CFB700106BD5 /* CircleViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		B5CD03F11B34CEF900106BD5 /* RotatingDialsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RotatingDialsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CD03F61B34CEF900106BD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CD03F71B34CEF900106BD5 /* RotatingDialsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotatingDialsTests.swift; sourceTree = "<group>"; };
+		B5CD04011B34CFB700106BD5 /* CircleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				B5CD03E81B34CEF900106BD5 /* Images.xcassets */,
 				B5CD03EA1B34CEF900106BD5 /* LaunchScreen.xib */,
 				B5CD03DF1B34CEF900106BD5 /* Supporting Files */,
+				B5CD04011B34CFB700106BD5 /* CircleViewController.swift */,
 			);
 			path = RotatingDials;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			files = (
 				B5CD03E41B34CEF900106BD5 /* ViewController.swift in Sources */,
 				B5CD03E21B34CEF900106BD5 /* AppDelegate.swift in Sources */,
+				B5CD04021B34CFB700106BD5 /* CircleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

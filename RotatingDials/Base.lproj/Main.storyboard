@@ -1,25 +1,76 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="RotatingDials" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-Mm-f9K">
+                                <rect key="frame" x="63" y="50" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8Vg-8d-6XU"/>
+                                    <constraint firstAttribute="height" constant="250" id="8XW-Ai-Kjc"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="QlT-H2-64U" kind="embed" id="clb-7e-EYh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="bDF-Mm-f9K" secondAttribute="centerX" id="7b4-AX-Poo"/>
+                            <constraint firstItem="bDF-Mm-f9K" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="yRL-2L-QLP"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Circle View Controller-->
+        <scene sceneID="gHp-zA-w7R">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="QlT-H2-64U" customClass="CircleViewController" customModule="RotatingDials" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SNM-b5-pgZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="3g5-4M-2Mq"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MaQ-M8-QIn">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-39-eBt">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.40784313729999999" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x4J-39-eBt" firstAttribute="top" secondItem="SNM-b5-pgZ" secondAttribute="bottom" id="2X8-FD-zV6"/>
+                            <constraint firstAttribute="bottom" secondItem="x4J-39-eBt" secondAttribute="bottom" id="GeF-fi-Rln"/>
+                            <constraint firstItem="x4J-39-eBt" firstAttribute="leading" secondItem="MaQ-M8-QIn" secondAttribute="leading" id="RLE-V8-FfP"/>
+                            <constraint firstAttribute="trailing" secondItem="x4J-39-eBt" secondAttribute="trailing" id="TnM-Ax-RsI"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <connections>
+                        <outlet property="orangeCircle" destination="x4J-39-eBt" id="jvR-Ow-y3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MRd-AP-Hqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="1061.5"/>
         </scene>
     </scenes>
 </document>
