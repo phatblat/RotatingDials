@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-Mm-f9K">
-                                <rect key="frame" x="63" y="50" width="250" height="250"/>
+                                <rect key="frame" x="-62" y="50" width="500" height="500"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="8Vg-8d-6XU"/>
-                                    <constraint firstAttribute="height" constant="250" id="8XW-Ai-Kjc"/>
+                                    <constraint firstAttribute="width" constant="500" id="8Vg-8d-6XU"/>
+                                    <constraint firstAttribute="height" constant="500" id="8XW-Ai-Kjc"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="QlT-H2-64U" kind="embed" id="clb-7e-EYh"/>
@@ -50,7 +50,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-39-eBt">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-39-eBt" userLabel="orange">
                                 <rect key="frame" x="125" y="0.0" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.40784313729999999" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -58,14 +58,38 @@
                                     <constraint firstAttribute="width" constant="250" id="gzg-2I-h20"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-md-A3a" userLabel="green">
+                                <rect key="frame" x="0.0" y="250" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="B5Y-aZ-tkx"/>
+                                    <constraint firstAttribute="width" constant="250" id="kap-jF-q0P"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-nF-GNL" userLabel="blue">
+                                <rect key="frame" x="250" y="250" width="250" height="250"/>
+                                <color key="backgroundColor" red="0.026878559602916297" green="0.098347547158772697" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Rto-9o-AiN"/>
+                                    <constraint firstAttribute="height" constant="250" id="iWD-pe-6sU"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x4J-39-eBt" firstAttribute="top" secondItem="SNM-b5-pgZ" secondAttribute="bottom" id="2X8-FD-zV6"/>
                             <constraint firstAttribute="centerX" secondItem="x4J-39-eBt" secondAttribute="centerX" id="4xJ-0g-OBn"/>
+                            <constraint firstItem="3g5-4M-2Mq" firstAttribute="top" secondItem="M3j-nF-GNL" secondAttribute="bottom" id="Ew1-GX-Vd3"/>
                             <constraint firstAttribute="bottom" secondItem="x4J-39-eBt" secondAttribute="bottom" id="GeF-fi-Rln"/>
+                            <constraint firstItem="x4J-39-eBt" firstAttribute="width" secondItem="M3j-nF-GNL" secondAttribute="width" id="Nex-5E-98N"/>
                             <constraint firstItem="x4J-39-eBt" firstAttribute="leading" secondItem="MaQ-M8-QIn" secondAttribute="leading" id="RLE-V8-FfP"/>
                             <constraint firstAttribute="trailing" secondItem="x4J-39-eBt" secondAttribute="trailing" id="TnM-Ax-RsI"/>
+                            <constraint firstItem="x4J-39-eBt" firstAttribute="height" secondItem="M3j-nF-GNL" secondAttribute="height" id="UCa-ZF-LTC"/>
+                            <constraint firstAttribute="trailing" secondItem="M3j-nF-GNL" secondAttribute="trailing" id="eSa-Cf-7pj"/>
+                            <constraint firstItem="EnR-md-A3a" firstAttribute="width" secondItem="x4J-39-eBt" secondAttribute="width" id="eii-z1-kZU"/>
+                            <constraint firstItem="EnR-md-A3a" firstAttribute="height" secondItem="x4J-39-eBt" secondAttribute="height" id="hnu-Zt-abB"/>
+                            <constraint firstItem="3g5-4M-2Mq" firstAttribute="top" secondItem="EnR-md-A3a" secondAttribute="bottom" id="o6x-U3-ew7"/>
+                            <constraint firstItem="EnR-md-A3a" firstAttribute="leading" secondItem="MaQ-M8-QIn" secondAttribute="leading" id="tSy-er-726"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -79,6 +103,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="500" height="500"/>
                     <connections>
+                        <outlet property="blueCircle" destination="M3j-nF-GNL" id="wqh-WC-H3I"/>
+                        <outlet property="greenCircle" destination="EnR-md-A3a" id="ZDB-f5-uyi"/>
                         <outlet property="orangeCircle" destination="x4J-39-eBt" id="jvR-Ow-y3y"/>
                     </connections>
                 </viewController>
