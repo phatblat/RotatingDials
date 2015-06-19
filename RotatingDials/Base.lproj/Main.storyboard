@@ -47,30 +47,44 @@
                         <viewControllerLayoutGuide type="bottom" id="3g5-4M-2Mq"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MaQ-M8-QIn">
-                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-39-eBt">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                <rect key="frame" x="125" y="0.0" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.99215686270000003" green="0.40784313729999999" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="0SW-pg-YfA"/>
+                                    <constraint firstAttribute="width" constant="250" id="gzg-2I-h20"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x4J-39-eBt" firstAttribute="top" secondItem="SNM-b5-pgZ" secondAttribute="bottom" id="2X8-FD-zV6"/>
+                            <constraint firstAttribute="centerX" secondItem="x4J-39-eBt" secondAttribute="centerX" id="4xJ-0g-OBn"/>
                             <constraint firstAttribute="bottom" secondItem="x4J-39-eBt" secondAttribute="bottom" id="GeF-fi-Rln"/>
                             <constraint firstItem="x4J-39-eBt" firstAttribute="leading" secondItem="MaQ-M8-QIn" secondAttribute="leading" id="RLE-V8-FfP"/>
                             <constraint firstAttribute="trailing" secondItem="x4J-39-eBt" secondAttribute="trailing" id="TnM-Ax-RsI"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GeF-fi-Rln"/>
+                                <exclude reference="RLE-V8-FfP"/>
+                                <exclude reference="TnM-Ax-RsI"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="500" height="500"/>
                     <connections>
                         <outlet property="orangeCircle" destination="x4J-39-eBt" id="jvR-Ow-y3y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRd-AP-Hqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="519" y="1061.5"/>
+            <point key="canvasLocation" x="518" y="1166"/>
         </scene>
     </scenes>
 </document>
