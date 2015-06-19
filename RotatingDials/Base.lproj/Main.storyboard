@@ -98,6 +98,9 @@
                                 <exclude reference="TnM-Ax-RsI"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="OOo-pc-ms4" appends="YES" id="gl4-B8-g26"/>
+                        </connections>
                     </view>
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -109,6 +112,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MRd-AP-Hqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="OOo-pc-ms4">
+                    <connections>
+                        <action selector="didTapCircleContainerView:" destination="QlT-H2-64U" id="MJk-oI-fIB"/>
+                        <outlet property="delegate" destination="QlT-H2-64U" id="jcl-FR-P8M"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="518" y="1166"/>
         </scene>

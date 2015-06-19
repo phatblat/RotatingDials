@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Ben Chatelain. All rights reserved.
 //
 
+import CoreGraphics
 import UIKit
 
 class CircleViewController: UIViewController {
@@ -29,4 +30,21 @@ class CircleViewController: UIViewController {
         blueCircle.layer.cornerRadius = diameter / 2
     }
 
+    @IBAction func didTapCircleContainerView(sender: AnyObject) {
+        println("didTapCircleContainerView")
+
+        UIView.animateWithDuration(0.5) { () -> Void in
+
+            let radians = self.degreesToRadians(120)
+            let transform = CGAffineTransformRotate(self.view.transform, CGFloat(radians))
+            // CGAffineTransformMakeRotation(M_PI);
+            self.view.transform = transform
+
+        }
+
+    }
+
+    private func degreesToRadians(angle: Double) -> Double {
+        return angle / 180.0 * M_PI
+    }
 }
