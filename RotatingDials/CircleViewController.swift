@@ -20,11 +20,6 @@ class CircleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.autoresizesSubviews = false
-
-        view.setTranslatesAutoresizingMaskIntoConstraints(true)
-        view.bounds = CGRect(x: 0, y: 0, width: diameter * 2, height: diameter * 2)
-
         orangeCircle.layer.cornerRadius = diameter / 2
         greenCircle.layer.cornerRadius = diameter / 2
         blueCircle.layer.cornerRadius = diameter / 2

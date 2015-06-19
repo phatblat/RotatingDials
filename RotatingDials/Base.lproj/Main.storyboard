@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-Mm-f9K">
-                                <rect key="frame" x="-62" y="50" width="500" height="500"/>
+                                <rect key="frame" x="-62" y="50" width="500" height="467"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="500" id="8Vg-8d-6XU"/>
-                                    <constraint firstAttribute="height" constant="500" id="8XW-Ai-Kjc"/>
+                                    <constraint firstAttribute="height" constant="467" id="8XW-Ai-Kjc"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="QlT-H2-64U" kind="embed" id="clb-7e-EYh"/>
@@ -47,7 +47,7 @@
                         <viewControllerLayoutGuide type="bottom" id="3g5-4M-2Mq"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MaQ-M8-QIn">
-                        <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="500" height="467"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x4J-39-eBt" userLabel="orange">
@@ -59,7 +59,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnR-md-A3a" userLabel="green">
-                                <rect key="frame" x="0.0" y="250" width="250" height="250"/>
+                                <rect key="frame" x="0.0" y="217" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="B5Y-aZ-tkx"/>
@@ -67,7 +67,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M3j-nF-GNL" userLabel="blue">
-                                <rect key="frame" x="250" y="250" width="250" height="250"/>
+                                <rect key="frame" x="250" y="217" width="250" height="250"/>
                                 <color key="backgroundColor" red="0.026878559602916297" green="0.098347547158772697" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Rto-9o-AiN"/>
@@ -103,8 +103,6 @@
                         </connections>
                     </view>
                     <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="500" height="500"/>
                     <connections>
                         <outlet property="blueCircle" destination="M3j-nF-GNL" id="wqh-WC-H3I"/>
                         <outlet property="greenCircle" destination="EnR-md-A3a" id="ZDB-f5-uyi"/>
