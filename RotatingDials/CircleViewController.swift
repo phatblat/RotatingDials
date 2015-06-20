@@ -24,9 +24,10 @@ class CircleViewController: UIViewController {
         greenCircle.layer.cornerRadius = diameter / 2
         blueCircle.layer.cornerRadius = diameter / 2
 
-        let anchorPoint = view.layer.anchorPoint
-        println("anchorPoint: \(anchorPoint)")
-        view.layer.anchorPoint = CGPoint(x: 0.5, y: 0.5666)
+        // The layer anchorPoint is the center of the rotation. 0.5,0.5 is the midpoint
+        // Adjusting downward since the view is slightly shorter than two circles tall
+        view.layer.anchorPoint = CGPoint(x: 0.5, y: 0.577)
+        println("anchorPoint: \(view.layer.anchorPoint)")
     }
 
     @IBAction func didTapCircleContainerView(sender: AnyObject) {
